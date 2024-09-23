@@ -14,7 +14,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .anyRequest().authenticated()  // Permite acesso a todos os endpoints
+                        .anyRequest().permitAll()
                 );
         return http.build();
     }
